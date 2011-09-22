@@ -1,0 +1,28 @@
+<?php
+/**
+ * @file
+ * Code for the CT Media feature.
+ */
+
+include_once('cmtls_media.features.inc');
+
+/**
+ * Implements hook_cmtls_app
+ * 
+ * @see cmtls.module
+ */
+function cmtls_media_cmtls_app() {
+  return array(
+    'cmtls_media' => array(
+      'title' => t('Media galleries'),
+      'description' => t('Galleries for images, videos and files'),
+      'node types' => array(
+        'media_gallery' => t('Gallery'),
+      ),
+    ),
+  );
+}
+
+
+
+
