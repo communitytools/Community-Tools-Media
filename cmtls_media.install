@@ -1,0 +1,12 @@
+<?php
+/**
+ * Implements hook_install()
+ */
+function cmtls_media_install() {
+  
+  // add og fields
+  og_create_field(OG_AUDIENCE_FIELD, 'node', 'media_gallery');
+  og_create_field(OG_CONTENT_ACCESS_FIELD, 'node', 'media_gallery');
+  
+  // add cmtls fields
+}
