@@ -9,4 +9,5 @@ function cmtls_media_install() {
   og_create_field(OG_CONTENT_ACCESS_FIELD, 'node', 'media_gallery');
   
   // add cmtls fields
+  cmtls_create_parent_reference_field('media_gallery');
 }
