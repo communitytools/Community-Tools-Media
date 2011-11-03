@@ -1,15 +1,36 @@
 <?php
 /**
- * @file
- * Code for the CT Media feature.
+ * Context API implementations
  */
+include_once('cmtls_media.contexts.inc');
 
-include_once('cmtls_media.features.inc');
+/**
+ * Context API implementations
+ */
+include_once('cmtls_media.views.inc');
+
+/**
+ * Implementation of hook_ctools_plugin_api().
+ */
+function cmtls_media_ctools_plugin_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "context" && $api == "context") {
+    return array("version" => "3");
+  }
+}
+
+/**
+ * Implementation of hook_views_api().
+ */
+function cmtls_media_views_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "views" && $api == "views_default") {
+    return array("version" => "3.0");
+  }
+}
 
 /**
  * Implements hook_cmtls_app
- * 
- * @see cmtls.module
  */
 function cmtls_media_cmtls_app() {
   return array(
@@ -29,7 +50,7 @@ function cmtls_media_cmtls_app() {
  * adds autocomplete for the location
  */
 function cmtls_media_form_media_gallery_node_form_alter(&$form, &$form_state, $form_id) {
-  drupal_add_js(drupal_get_path('module', 'cmtls_location') . '/js/cmtls.location_ac.js');
+  drupal_add_js(drupal_get_path('module', 'cmtls') . '/js/cmtls.location_ac.js');
 }
 
 

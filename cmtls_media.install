@@ -3,13 +3,23 @@
  * Implements hook_install()
  */
 function cmtls_media_install() {
-  
-  // add og fields
+  // adds media_gallery fields
   og_create_field(OG_AUDIENCE_FIELD, 'node', 'media_gallery');
   og_create_field(OG_CONTENT_ACCESS_FIELD, 'node', 'media_gallery');
-  
-  // add cmtls fields
   cmtls_create_field('field_cmtls_application', 'media_gallery');
   cmtls_create_field('field_cmtls_tags', 'media_gallery');
   cmtls_create_field('field_cmtls_location', 'media_gallery');
+  variable_set('comment_anonymous_media_gallery', 0);
+  variable_set('comment_media_gallery', 2);
+  variable_set('comment_default_mode_media_gallery', 0);
+  variable_set('comment_default_per_page_media_gallery', 50);
+  variable_set('comment_form_location_media_gallery', 1);
+  variable_set('comment_preview_media_gallery', 1);
+  variable_set('comment_subject_field_media_gallery', 0);
+  variable_set('menu_options_media_gallery', array('menu-cmtls'));
+  variable_set('menu_parent_media_gallery', 'menu-cmtls:0');
+  variable_set('node_options_media_gallery', array('status'));
+  variable_set('node_preview_media_gallery', 1);
+  variable_set('node_submitted_media_gallery', 1);
+  variable_set('og_group_type_media_gallery', 'omitted');
 }
