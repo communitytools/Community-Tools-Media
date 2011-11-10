@@ -1,7 +1,6 @@
 core = "7.x"
 dependencies[] = "cmtls"
 dependencies[] = "multiform"
-dependencies[] = "media"
 dependencies[] = "media_browser_plus"
 dependencies[] = "media_gallery"
 dependencies[] = "plupload"
