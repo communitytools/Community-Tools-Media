@@ -54,6 +54,50 @@ function cmtls_media_install() {
   $instance['widget']['weight'] = 2;
   field_update_instance($instance);
   
+  $instance = field_info_instance('node', 'media_gallery_media', 'media_gallery');
+  $instance['display'] = array(
+    'cmtls_wall' => array(
+      'label' => 'hidden',
+      'module' => 'text',
+      'settings' => array(
+        'trim_length' => variable_get('teaser_length', 200),
+      ),
+      'type' => 'text_trimmed',
+      'weight' => '1',
+    ),
+    'default' => array(
+      'label' => 'hidden',
+      'module' => 'text',
+      'settings' => array(),
+      'type' => 'text_default',
+      'weight' => 0,
+    ),
+    'full' => array(
+      'label' => 'hidden',
+      'module' => 'text',
+      'settings' => array(),
+      'type' => 'text_default',
+      'weight' => 0,
+    ),
+    'media_gallery_block' => array(
+      'label' => 'hidden',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ),
+    'teaser' => array(
+      'label' => 'hidden',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => 0,
+    ),
+  );
+  field_update_instance($instance);
+  
+  $settings = field_bundle_settings('node', 'media_gallery');
+  $settings['view_modes']['cmtls_wall']['custom_settings'] = TRUE;
+  $settings = field_bundle_settings('node', 'media_gallery', $settings);
+  
   variable_set('comment_anonymous_media_gallery', 0);
   variable_set('comment_media_gallery', 2);
   variable_set('comment_default_mode_media_gallery', 0);
