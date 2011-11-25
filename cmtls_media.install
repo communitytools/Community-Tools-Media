@@ -105,8 +105,8 @@ function cmtls_media_install() {
   variable_set('comment_form_location_media_gallery', 1);
   variable_set('comment_preview_media_gallery', 1);
   variable_set('comment_subject_field_media_gallery', 0);
-  variable_set('menu_options_media_gallery', array('menu-cmtls'));
-  variable_set('menu_parent_media_gallery', 'menu-cmtls:0');
+  variable_set('menu_options_media_gallery', array('menu-cmtls-groups'));
+  variable_set('menu_parent_media_gallery', 'menu-cmtls-groups:0');
   variable_set('node_options_media_gallery', array('status'));
   variable_set('node_preview_media_gallery', 1);
   variable_set('node_submitted_media_gallery', 1);
