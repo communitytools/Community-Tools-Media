@@ -52,9 +52,6 @@ function cmtls_media_install() {
 
   $instance = field_info_instance('node', 'media_gallery_description', 'media_gallery');
   $instance['widget']['weight'] = 2;
-  field_update_instance($instance);
-  
-  $instance = field_info_instance('node', 'media_gallery_media', 'media_gallery');
   $instance['display'] = array(
     'cmtls_wall' => array(
       'label' => 'hidden',
