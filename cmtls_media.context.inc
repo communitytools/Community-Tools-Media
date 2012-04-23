@@ -5,17 +5,17 @@
  */
 
 /**
- * Implementation of hook_context_default_contexts().
+ * Implements hook_context_default_contexts().
  */
 function cmtls_media_context_default_contexts() {
   $export = array();
 
-  $context = new stdClass;
+  $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'CT Media meta blocks';
-  $context->description = 'Community Tools media metadata blocks';
-  $context->tag = 'cmtls';
+  $context->name = 'cmtls_media_page';
+  $context->description = 'Community Tools media page';
+  $context->tag = 'CT media';
   $context->conditions = array(
     'node' => array(
       'values' => array(
@@ -29,17 +29,17 @@ function cmtls_media_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-cmtls_media_location-block' => array(
+        'views-cb129c8a19431ae6b2fd1711646e2de2' => array(
           'module' => 'views',
-          'delta' => 'cmtls_media_location-block',
+          'delta' => 'cb129c8a19431ae6b2fd1711646e2de2',
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
-        'views-cmtls_media_tags-block' => array(
+        'views-d3b739be3a716e61b54f0c1254eefd60' => array(
           'module' => 'views',
-          'delta' => 'cmtls_media_tags-block',
+          'delta' => 'd3b739be3a716e61b54f0c1254eefd60',
           'region' => 'sidebar_second',
-          'weight' => '-9',
+          'weight' => '-10',
         ),
       ),
     ),
@@ -48,16 +48,16 @@ function cmtls_media_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Community Tools media metadata blocks');
-  t('cmtls');
-  $export['CT Media meta blocks'] = $context;
+  t('CT media');
+  t('Community Tools media page');
+  $export['cmtls_media_page'] = $context;
 
-  $context = new stdClass;
+  $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'CT Media wall';
-  $context->description = 'Community Tools media list';
-  $context->tag = 'cmtls';
+  $context->name = 'cmtls_medias_page';
+  $context->description = 'Community Tools medias page';
+  $context->tag = 'CT media';
   $context->conditions = array(
     'cmtls_app_type' => array(
       'values' => array(
@@ -92,9 +92,9 @@ function cmtls_media_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Community Tools media list');
-  t('cmtls');
-  $export['CT Media wall'] = $context;
+  t('CT media');
+  t('Community Tools medias page');
+  $export['cmtls_medias_page'] = $context;
 
   return $export;
 }

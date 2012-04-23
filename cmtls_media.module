@@ -2,35 +2,7 @@
 /**
  * Context API implementations
  */
-include_once('cmtls_media.contexts.inc');
-
-/**
- * Context API implementations
- */
-include_once('cmtls_media.views.inc');
-
-/**
- * Implementation of hook_ctools_plugin_api().
- */
-function cmtls_media_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
-  if ($module == "context" && $api == "context") {
-    return array("version" => "3");
-  }
-  if ($module == 'ds' && $api == 'ds') {
-    return array('version' => 1);
-  }
-}
-
-/**
- * Implementation of hook_views_api().
- */
-function cmtls_media_views_api() {
-  list($module, $api) = func_get_args();
-  if ($module == "views" && $api == "views_default") {
-    return array("version" => "3.0");
-  }
-}
+include_once('cmtls_media.features.inc');
 
 /**
  * Implements hook_cmtls_app
@@ -48,14 +20,130 @@ function cmtls_media_cmtls_app() {
 }
 
 /**
- * Implements hook_form_FORM_ID_alter().
- * 
- * adds autocomplete for the location
+ * Implements hook_field_formatter_info().
  */
-function cmtls_media_form_media_gallery_node_form_alter(&$form, &$form_state, $form_id) {
-  drupal_add_js(drupal_get_path('module', 'cmtls') . '/js/cmtls.location_ac.js');
+function cmtls_media_field_formatter_info() {
+  return array(
+    'cmtls_media_preview' => array(
+      'label' => t('Gallery media preview'),
+      'field types' => array('media'),
+      'settings' => array('file_thumbs_count' => 6),
+    ),
+  );
 }
 
+/**
+ * Implements hook_field_formatter_view().
+ */
+function cmtls_media_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+  if (!$items) {
+    return $element;
+  }
+  
+  $file_view_mode = 'cmtls_gallery_teaser';
+  $thumbs_count = $display['settings']['file_thumbs_count'];
 
+  // The Formatter Reference module allows per-entity, rather than
+  // per-bundle, formatter assignment, but it only works when the field being
+  // formatted and the reference field are part of the same entity. For media
+  // galleries, we want to enable formatter reference fields on the gallery node
+  // to be used as formatters for fields within the file entities, so we pass
+  // along those field values to them. Here we just collect all formatter
+  // reference field names for the entity.
+  $formatter_reference_fields = array();
+  if (module_exists('formatter_reference')) {
+    $fields = field_info_fields();
+    list(, , $bundle) = entity_extract_ids($entity_type, $entity);
+    foreach (field_info_instances($entity_type, $bundle) as $field_name => $instance_info) {
+      if ($fields[$field_name]['type'] == 'formatter_reference') {
+        $formatter_reference_fields[] = $field_name;
+      }
+    }
+  }
 
+  // Prepare the referenced file entities for viewing.
+  $files = array();
+  $i = 0;
+  foreach ($items as $delta => $item) {
+    $i++;
+    if($i > $thumbs_count) {
+      break;
+    }
+    $file = $item['file'];
 
+    // Pass along formatter reference field values from the gallery to the file.
+    foreach ($formatter_reference_fields as $field_name) {
+      if (!isset($file->{$field_name}) && isset($entity->{$field_name})) {
+        $file->{$field_name} = $entity->{$field_name};
+      }
+    }
+
+    // Set a default value for the file's media_title field.
+    // @todo Eventually, fix this to take into account the possibility of a
+    //   multilingual media title field.
+    if (isset($file->media_title) && !isset($file->media_title[LANGUAGE_NONE][0]['value'])) {
+      $file->media_title[LANGUAGE_NONE][0]['value'] = _media_gallery_get_media_title($file);
+    }
+
+    $files[$file->fid] = $file;
+  }
+  field_attach_prepare_view('file', $files, $file_view_mode);
+  entity_prepare_view('file', $files);
+
+  // View each file. We don't use file_view_multiple(), because we need the
+  // render array indexed by $delta rather than by file id.
+  $i = 0;
+  foreach ($items as $delta => $item) {
+    $i++;
+    if($i > $thumbs_count) {
+      break;
+    }
+    $element[$delta] = file_view($item['file'], $file_view_mode, $langcode);
+    $element[$delta]['#media_gallery_entity_type'] = $entity_type;
+    $element[$delta]['#media_gallery_entity'] = $entity;
+    $element[$delta]['#theme'] = 'media_gallery_collection_thumbnail';
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_settings_form().
+ */
+function cmtls_media_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+
+  $element = array();
+
+  if ($display['type'] == 'cmtls_media_preview') {
+    $element['file_thumbs_count'] = array(
+      '#title' => t('Thumbnails count'),
+      '#type' => 'textfield',
+      '#default_value' => $settings['file_thumbs_count'],
+      '#size' => 10,
+      '#required' => TRUE,
+    );
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_settings_summary().
+ */
+function cmtls_media_field_formatter_settings_summary($field, $instance, $view_mode) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+
+  $summary = '';
+
+  if ($display['type'] == 'cmtls_media_preview') {
+    $entity_info = entity_get_info('file');
+    $file_view_mode_label = isset($entity_info['view modes'][$settings['file_thumbs_count']]) ? $entity_info['view modes'][$settings['file_thumbs_count']]['label'] : t('Default');
+    $summary = t('Thumbs: @view_mode', array('@view_mode' => $file_view_mode_label));
+  }
+
+  return $summary;
+}

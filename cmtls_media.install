@@ -3,98 +3,6 @@
  * Implements hook_install()
  */
 function cmtls_media_install() {
-  // adds media_gallery fields
-  og_create_field(OG_AUDIENCE_FIELD, 'node', 'media_gallery');
-  $instance = field_info_instance('node', OG_AUDIENCE_FIELD, 'media_gallery');
-  foreach ($instance['display'] as &$display) {
-    $display['type'] = 'hidden';
-  }
-  $instance['widget']['weight'] = 44;
-  field_update_instance($instance);
-    
-  og_create_field(OG_CONTENT_ACCESS_FIELD, 'node', 'media_gallery');
-  $instance = field_info_instance('node', OG_CONTENT_ACCESS_FIELD, 'media_gallery');
-  foreach ($instance['display'] as &$display) {
-    $display['type'] = 'hidden';
-  }
-  $instance['widget']['weight'] = 45;
-  field_update_instance($instance);
-  
-  cmtls_create_field(array(
-    'field_config' => array(
-      'field_name' => 'field_cmtls_application'
-    ),
-    'field_instance' => array(
-      'bundle' => 'media_gallery',
-      'widget' => array('weight' => 43),
-    ),
-  ));
-  
-  cmtls_create_field(array(
-    'field_config' => array(
-      'field_name' => 'field_cmtls_tags'
-    ),
-    'field_instance' => array(
-      'bundle' => 'media_gallery',
-      'widget' => array('weight' => 1),
-    ),
-  ));
-  
-  cmtls_create_field(array(
-    'field_config' => array(
-      'field_name' => 'field_cmtls_location'
-    ),
-    'field_instance' => array(
-      'bundle' => 'media_gallery',
-      'widget' => array('weight' => 3),
-    ),
-  ));
-
-  $instance = field_info_instance('node', 'media_gallery_description', 'media_gallery');
-  $instance['widget']['weight'] = 2;
-  $instance['display'] = array(
-    'cmtls_wall' => array(
-      'label' => 'hidden',
-      'module' => 'text',
-      'settings' => array(
-        'trim_length' => variable_get('teaser_length', 200),
-      ),
-      'type' => 'text_trimmed',
-      'weight' => '1',
-    ),
-    'default' => array(
-      'label' => 'hidden',
-      'module' => 'text',
-      'settings' => array(),
-      'type' => 'text_default',
-      'weight' => 0,
-    ),
-    'full' => array(
-      'label' => 'hidden',
-      'module' => 'text',
-      'settings' => array(),
-      'type' => 'text_default',
-      'weight' => 0,
-    ),
-    'media_gallery_block' => array(
-      'label' => 'hidden',
-      'settings' => array(),
-      'type' => 'hidden',
-      'weight' => 0,
-    ),
-    'teaser' => array(
-      'label' => 'hidden',
-      'settings' => array(),
-      'type' => 'hidden',
-      'weight' => 0,
-    ),
-  );
-  field_update_instance($instance);
-  
-  $settings = field_bundle_settings('node', 'media_gallery');
-  $settings['view_modes']['cmtls_wall']['custom_settings'] = TRUE;
-  $settings = field_bundle_settings('node', 'media_gallery', $settings);
-  
   variable_set('comment_anonymous_media_gallery', 0);
   variable_set('comment_media_gallery', 2);
   variable_set('comment_default_mode_media_gallery', 0);
@@ -102,10 +10,13 @@ function cmtls_media_install() {
   variable_set('comment_form_location_media_gallery', 1);
   variable_set('comment_preview_media_gallery', 1);
   variable_set('comment_subject_field_media_gallery', 0);
-  variable_set('menu_options_media_gallery', array('menu-cmtls-groups'));
-  variable_set('menu_parent_media_gallery', 'menu-cmtls-groups:0');
   variable_set('node_options_media_gallery', array('status'));
-  variable_set('node_preview_media_gallery', 1);
+  variable_set('node_preview_media_gallery', 0);
   variable_set('node_submitted_media_gallery', 1);
   variable_set('og_group_type_media_gallery', 'omitted');
+  
+  $settings = variable_get('field_bundle_settings', array());
+  $settings['node']['media_gallery']['view_modes']['cmtls_teaser']['custom_settings'] = TRUE;
+  $settings['node']['media_gallery']['view_modes']['cmtls_gallery_preview']['custom_settings'] = TRUE;
+  variable_set('field_bundle_settings', $settings);
 }
