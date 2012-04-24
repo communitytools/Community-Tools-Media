@@ -62,26 +62,6 @@ function cmtls_media_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'node|media_gallery|cmtls_teaser';
-  $ds_fieldsetting->entity_type = 'node';
-  $ds_fieldsetting->bundle = 'media_gallery';
-  $ds_fieldsetting->view_mode = 'cmtls_teaser';
-  $ds_fieldsetting->settings = array(
-    'title' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'link' => '1',
-        'wrapper' => 'h2',
-        'class' => '',
-      ),
-    ),
-  );
-  $export['node|media_gallery|cmtls_teaser'] = $ds_fieldsetting;
-
-  $ds_fieldsetting = new stdClass();
-  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|media_gallery|cmtls_gallery_preview';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'media_gallery';
@@ -99,6 +79,26 @@ function cmtls_media_ds_field_settings_info() {
     ),
   );
   $export['node|media_gallery|cmtls_gallery_preview'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|media_gallery|cmtls_teaser';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'media_gallery';
+  $ds_fieldsetting->view_mode = 'cmtls_teaser';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h2',
+        'class' => '',
+      ),
+    ),
+  );
+  $export['node|media_gallery|cmtls_teaser'] = $ds_fieldsetting;
 
   return $export;
 }
@@ -175,6 +175,32 @@ function cmtls_media_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|media_gallery|cmtls_gallery_preview';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'media_gallery';
+  $ds_layout->view_mode = 'cmtls_gallery_preview';
+  $ds_layout->layout = 'cmtls_short_4region';
+  $ds_layout->settings = array(
+    'hide_empty_regions' => 1,
+    'hide_sidebars' => 0,
+    'regions' => array(
+      'left_column' => array(
+        0 => 'media_gallery_media',
+      ),
+      'middle' => array(
+        0 => 'title',
+      ),
+    ),
+    'fields' => array(
+      'media_gallery_media' => 'left_column',
+      'title' => 'middle',
+    ),
+    'classes' => array(),
+  );
+  $export['node|media_gallery|cmtls_gallery_preview'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|media_gallery|cmtls_teaser';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'media_gallery';
@@ -202,32 +228,6 @@ function cmtls_media_ds_layout_settings_info() {
     'classes' => array(),
   );
   $export['node|media_gallery|cmtls_teaser'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'node|media_gallery|cmtls_gallery_preview';
-  $ds_layout->entity_type = 'node';
-  $ds_layout->bundle = 'media_gallery';
-  $ds_layout->view_mode = 'cmtls_gallery_preview';
-  $ds_layout->layout = 'cmtls_short_4region';
-  $ds_layout->settings = array(
-    'hide_empty_regions' => 1,
-    'hide_sidebars' => 0,
-    'regions' => array(
-      'left_column' => array(
-        0 => 'media_gallery_media',
-      ),
-      'middle' => array(
-        0 => 'title',
-      ),
-    ),
-    'fields' => array(
-      'media_gallery_media' => 'left_column',
-      'title' => 'middle',
-    ),
-    'classes' => array(),
-  );
-  $export['node|media_gallery|cmtls_gallery_preview'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -360,21 +360,21 @@ function cmtls_media_ds_view_modes_info() {
 
   $ds_view_mode = new stdClass();
   $ds_view_mode->api_version = 1;
-  $ds_view_mode->view_mode = 'cmtls_gallery_teaser';
-  $ds_view_mode->label = 'CT gallery teaser';
-  $ds_view_mode->entities = array(
-    'file' => 'file',
-  );
-  $export['cmtls_gallery_teaser'] = $ds_view_mode;
-
-  $ds_view_mode = new stdClass();
-  $ds_view_mode->api_version = 1;
   $ds_view_mode->view_mode = 'cmtls_gallery_preview';
   $ds_view_mode->label = 'CT Media teaser';
   $ds_view_mode->entities = array(
     'node' => 'node',
   );
   $export['cmtls_gallery_preview'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'cmtls_gallery_teaser';
+  $ds_view_mode->label = 'CT gallery teaser';
+  $ds_view_mode->entities = array(
+    'file' => 'file',
+  );
+  $export['cmtls_gallery_teaser'] = $ds_view_mode;
 
   return $export;
 }

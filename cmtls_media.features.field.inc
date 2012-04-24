@@ -119,23 +119,29 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
-        'cmtls_teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '17',
-        ),
         'cmtls_gallery_preview' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '16',
         ),
+        'cmtls_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '17',
+        ),
         'default' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '16',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'media_gallery_block' => array(
           'label' => 'above',
@@ -268,6 +274,12 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
+        'cmtls_gallery_preview' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '12',
+        ),
         'cmtls_teaser' => array(
           'label' => 'above',
           'module' => 'location_cck',
@@ -275,17 +287,17 @@ function cmtls_media_field_default_fields() {
           'type' => 'location_default',
           'weight' => '2',
         ),
-        'cmtls_gallery_preview' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '12',
-        ),
         'default' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '12',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'media_gallery_block' => array(
           'label' => 'above',
@@ -356,6 +368,12 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
+        'cmtls_gallery_preview' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '14',
+        ),
         'cmtls_teaser' => array(
           'label' => 'above',
           'module' => 'taxonomy',
@@ -363,17 +381,17 @@ function cmtls_media_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => '3',
         ),
-        'cmtls_gallery_preview' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '14',
-        ),
         'default' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '14',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'media_gallery_block' => array(
           'label' => 'above',
@@ -441,13 +459,13 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
-        'cmtls_teaser' => array(
+        'cmtls_gallery_preview' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '25',
         ),
-        'cmtls_gallery_preview' => array(
+        'cmtls_teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -546,13 +564,13 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
-        'cmtls_teaser' => array(
+        'cmtls_gallery_preview' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '26',
         ),
-        'cmtls_gallery_preview' => array(
+        'cmtls_teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -642,13 +660,13 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => 'Display a "download original image" link',
       'display' => array(
-        'cmtls_teaser' => array(
+        'cmtls_gallery_preview' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '20',
         ),
-        'cmtls_gallery_preview' => array(
+        'cmtls_teaser' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
@@ -729,13 +747,13 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
-        'cmtls_teaser' => array(
+        'cmtls_gallery_preview' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '22',
         ),
-        'cmtls_gallery_preview' => array(
+        'cmtls_teaser' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
@@ -807,13 +825,13 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
-        'cmtls_teaser' => array(
+        'cmtls_gallery_preview' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '23',
         ),
-        'cmtls_gallery_preview' => array(
+        'cmtls_teaser' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
@@ -907,13 +925,13 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
-        'cmtls_teaser' => array(
+        'cmtls_gallery_preview' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '24',
         ),
-        'cmtls_gallery_preview' => array(
+        'cmtls_teaser' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
@@ -924,6 +942,12 @@ function cmtls_media_field_default_fields() {
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '24',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'media_gallery_block' => array(
           'label' => 'above',
@@ -986,17 +1010,17 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
-        'cmtls_teaser' => array(
-          'label' => 'hidden',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '16',
-        ),
         'cmtls_gallery_preview' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '17',
+        ),
+        'cmtls_teaser' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '16',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1071,17 +1095,17 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
-        'cmtls_teaser' => array(
-          'label' => 'hidden',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '12',
-        ),
         'cmtls_gallery_preview' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '5',
+        ),
+        'cmtls_teaser' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '12',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1161,13 +1185,13 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
-        'cmtls_teaser' => array(
+        'cmtls_gallery_preview' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '21',
         ),
-        'cmtls_gallery_preview' => array(
+        'cmtls_teaser' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
@@ -1248,17 +1272,17 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
-        'cmtls_teaser' => array(
-          'label' => 'hidden',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '14',
-        ),
         'cmtls_gallery_preview' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '13',
+        ),
+        'cmtls_teaser' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '14',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1333,13 +1357,13 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
-        'cmtls_teaser' => array(
+        'cmtls_gallery_preview' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '19',
         ),
-        'cmtls_gallery_preview' => array(
+        'cmtls_teaser' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
@@ -1418,13 +1442,13 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => 'Show title and description',
       'display' => array(
-        'cmtls_teaser' => array(
+        'cmtls_gallery_preview' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '15',
         ),
-        'cmtls_gallery_preview' => array(
+        'cmtls_teaser' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
@@ -1497,15 +1521,6 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
-        'cmtls_teaser' => array(
-          'label' => 'hidden',
-          'module' => 'cmtls_media',
-          'settings' => array(
-            'file_thumbs_count' => '5',
-          ),
-          'type' => 'cmtls_media_preview',
-          'weight' => '1',
-        ),
         'cmtls_gallery_preview' => array(
           'label' => 'hidden',
           'module' => 'cmtls_media',
@@ -1514,6 +1529,15 @@ function cmtls_media_field_default_fields() {
           ),
           'type' => 'cmtls_media_preview',
           'weight' => '0',
+        ),
+        'cmtls_teaser' => array(
+          'label' => 'hidden',
+          'module' => 'cmtls_media',
+          'settings' => array(
+            'file_thumbs_count' => '5',
+          ),
+          'type' => 'cmtls_media_preview',
+          'weight' => '1',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1604,13 +1628,13 @@ function cmtls_media_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
-        'cmtls_teaser' => array(
+        'cmtls_gallery_preview' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '18',
         ),
-        'cmtls_gallery_preview' => array(
+        'cmtls_teaser' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
