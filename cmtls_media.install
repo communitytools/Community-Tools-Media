@@ -15,8 +15,10 @@ function cmtls_media_install() {
   variable_set('node_submitted_media_gallery', 1);
   variable_set('og_group_type_media_gallery', 'omitted');
   
+  // enable DS view modes
   $settings = variable_get('field_bundle_settings', array());
   $settings['node']['media_gallery']['view_modes']['cmtls_teaser']['custom_settings'] = TRUE;
   $settings['node']['media_gallery']['view_modes']['cmtls_gallery_preview']['custom_settings'] = TRUE;
+  $settings['comment']['comment_node_media_gallery']['view_modes']['cmtls_teaser']['custom_settings'] = TRUE;
   variable_set('field_bundle_settings', $settings);
 }
