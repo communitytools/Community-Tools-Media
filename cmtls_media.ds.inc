@@ -100,6 +100,36 @@ function cmtls_media_ds_field_settings_info() {
   );
   $export['node|media_gallery|cmtls_teaser'] = $ds_fieldsetting;
 
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|media_gallery|default';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'media_gallery';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'comments' => array(
+      'weight' => '3',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['node|media_gallery|default'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|media_gallery|full';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'media_gallery';
+  $ds_fieldsetting->view_mode = 'full';
+  $ds_fieldsetting->settings = array(
+    'comments' => array(
+      'weight' => '3',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['node|media_gallery|full'] = $ds_fieldsetting;
+
   return $export;
 }
 
@@ -244,12 +274,14 @@ function cmtls_media_ds_layout_settings_info() {
         0 => 'media_gallery_description',
         1 => 'add_media_link',
         2 => 'media_gallery_media',
+        3 => 'comments',
       ),
     ),
     'fields' => array(
       'media_gallery_description' => 'ds_content',
       'add_media_link' => 'ds_content',
       'media_gallery_media' => 'ds_content',
+      'comments' => 'ds_content',
     ),
     'classes' => array(),
   );
@@ -324,6 +356,34 @@ function cmtls_media_ds_layout_settings_info() {
     'classes' => array(),
   );
   $export['node|media_gallery|form'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|media_gallery|full';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'media_gallery';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'hide_empty_regions' => 0,
+    'hide_sidebars' => 0,
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'media_gallery_description',
+        1 => 'add_media_link',
+        2 => 'media_gallery_media',
+        3 => 'comments',
+      ),
+    ),
+    'fields' => array(
+      'media_gallery_description' => 'ds_content',
+      'add_media_link' => 'ds_content',
+      'media_gallery_media' => 'ds_content',
+      'comments' => 'ds_content',
+    ),
+    'classes' => array(),
+  );
+  $export['node|media_gallery|full'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

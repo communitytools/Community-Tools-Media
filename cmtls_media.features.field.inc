@@ -141,7 +141,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '14',
         ),
         'media_gallery_block' => array(
           'label' => 'above',
@@ -297,7 +297,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '16',
         ),
         'media_gallery_block' => array(
           'label' => 'above',
@@ -391,7 +391,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '15',
         ),
         'media_gallery_block' => array(
           'label' => 'above',
@@ -481,7 +481,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '12',
         ),
         'media_gallery_block' => array(
           'label' => 'above',
@@ -586,7 +586,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '17',
         ),
         'media_gallery_block' => array(
           'label' => 'above',
@@ -682,7 +682,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 8,
+          'weight' => '23',
         ),
         'media_gallery_block' => array(
           'label' => 'hidden',
@@ -769,7 +769,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 10,
+          'weight' => '25',
         ),
         'media_gallery_block' => array(
           'label' => 'hidden',
@@ -847,7 +847,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 11,
+          'weight' => '26',
         ),
         'media_gallery_block' => array(
           'label' => 'hidden',
@@ -947,7 +947,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '13',
         ),
         'media_gallery_block' => array(
           'label' => 'above',
@@ -1032,7 +1032,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 5,
+          'weight' => '20',
         ),
         'media_gallery_block' => array(
           'label' => 'hidden',
@@ -1119,7 +1119,7 @@ function cmtls_media_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'media_gallery_block' => array(
           'label' => 'hidden',
@@ -1207,7 +1207,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 9,
+          'weight' => '24',
         ),
         'media_gallery_block' => array(
           'label' => 'hidden',
@@ -1294,7 +1294,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 3,
+          'weight' => '18',
         ),
         'media_gallery_block' => array(
           'label' => 'hidden',
@@ -1379,7 +1379,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 7,
+          'weight' => '22',
         ),
         'media_gallery_block' => array(
           'label' => 'hidden',
@@ -1464,7 +1464,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 4,
+          'weight' => '19',
         ),
         'media_gallery_block' => array(
           'label' => 'hidden',
@@ -1555,7 +1555,7 @@ function cmtls_media_field_default_fields() {
             'file_view_mode' => 'media_gallery_thumbnail',
           ),
           'type' => 'media_gallery',
-          'weight' => 2,
+          'weight' => '2',
         ),
         'media_gallery_block' => array(
           'label' => 'hidden',
@@ -1650,7 +1650,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 6,
+          'weight' => '21',
         ),
         'media_gallery_block' => array(
           'label' => 'hidden',

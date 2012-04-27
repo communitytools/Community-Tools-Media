@@ -176,6 +176,28 @@ function cmtls_media_views_default_views() {
   $handler->display->display_options['arguments']['group']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['group']['break_phrase'] = 0;
   $handler->display->display_options['arguments']['group']['not'] = 0;
+  $translatables['cmtls_media'] = array(
+    t('Master'),
+    t('Folders'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('group membership'),
+    t('Post date'),
+    t('Title'),
+    t('Last comment time'),
+    t('All'),
+    t('Application content block'),
+    t('Latest media block'),
+    t('Latest media'),
+    t('Latest in group'),
+  );
   $export['cmtls_media'] = $view;
 
   return $export;
