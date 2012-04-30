@@ -20,5 +20,6 @@ function cmtls_media_install() {
   $settings['node']['media_gallery']['view_modes']['cmtls_teaser']['custom_settings'] = TRUE;
   $settings['node']['media_gallery']['view_modes']['cmtls_gallery_preview']['custom_settings'] = TRUE;
   $settings['comment']['comment_node_media_gallery']['view_modes']['cmtls_teaser']['custom_settings'] = TRUE;
+  $settings['file']['image']['view_modes']['cmtls_gallery_teaser']['custom_settings'] = TRUE;
   variable_set('field_bundle_settings', $settings);
 }
