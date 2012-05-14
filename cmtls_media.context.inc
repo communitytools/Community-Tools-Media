@@ -13,6 +13,42 @@ function cmtls_media_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'cmtls_media_latest';
+  $context->description = 'The latest media galleries block on the group page';
+  $context->tag = 'CT media';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'cmtls_group' => 'cmtls_group',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-cmtls_media-block_1' => array(
+          'module' => 'views',
+          'delta' => 'cmtls_media-block_1',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('CT media');
+  t('The latest media galleries block on the group page');
+  $export['cmtls_media_latest'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'cmtls_media_page';
   $context->description = 'Community Tools media page';
   $context->tag = 'CT media';
