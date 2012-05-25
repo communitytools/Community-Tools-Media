@@ -16,10 +16,16 @@ function cmtls_media_install() {
   variable_set('og_group_type_media_gallery', 'omitted');
   
   // enable DS view modes
-  $settings = variable_get('field_bundle_settings', array());
-  $settings['node']['media_gallery']['view_modes']['cmtls_teaser']['custom_settings'] = TRUE;
-  $settings['node']['media_gallery']['view_modes']['cmtls_gallery_preview']['custom_settings'] = TRUE;
-  $settings['comment']['comment_node_media_gallery']['view_modes']['cmtls_teaser']['custom_settings'] = TRUE;
-  $settings['file']['image']['view_modes']['cmtls_gallery_teaser']['custom_settings'] = TRUE;
-  variable_set('field_bundle_settings', $settings);
+  $settings = variable_get('field_bundle_settings_node__media_gallery', array());
+  $settings['view_modes']['cmtls_teaser']['custom_settings'] = TRUE;
+  $settings['view_modes']['cmtls_gallery_preview']['custom_settings'] = TRUE;
+  variable_set('field_bundle_settings_node__media_gallery', $settings);
+  
+  $settings = variable_get('field_bundle_settings_comment__comment_node_media_gallery', array());
+  $settings['view_modes']['cmtls_teaser']['custom_settings'] = TRUE;
+  variable_set('field_bundle_settings_comment__comment_node_media_gallery', $settings);
+  
+  $settings = variable_get('field_bundle_settings_file__image', array());
+  $settings['view_modes']['cmtls_gallery_teaser']['custom_settings'] = TRUE;
+  variable_set('field_bundle_settings_file__image', $settings);
 }
