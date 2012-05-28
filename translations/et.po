@@ -1,0 +1,244 @@
+# $Id$
+#
+# Estonian translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  cmtls_media.context.inc: n/a
+#  cmtls_media.features.field.inc: n/a
+#  cmtls_media.views_default.inc: n/a
+#  cmtls_media.module: n/a
+#  cmtls_media.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2012-05-25 16:39+0300\n"
+"PO-Revision-Date: 2012-05-25 16:39+0300\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Estonian <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: cmtls_media.context.inc:45;87;131
+msgid "CT media"
+msgstr ""
+
+#: cmtls_media.context.inc:46
+msgid "The latest media galleries block on the group page"
+msgstr ""
+
+#: cmtls_media.context.inc:88
+msgid "Community Tools media page"
+msgstr ""
+
+#: cmtls_media.context.inc:132
+msgid "Community Tools medias page"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1927
+msgid "Allow downloading of the original image"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1928
+msgid "Application"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1929
+msgid "Choose a default <a href=\"http://creativecommons.org\">Creative Commons</a> license for all Gallery media. Later you can change the license for each piece of media."
+msgstr ""
+
+#: cmtls_media.features.field.inc:1930
+msgid "Comment"
+msgstr "Kommentaar"
+
+#: cmtls_media.features.field.inc:1931
+msgid "Create a block of most recently added media"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1932
+msgid "Default license settings"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1933
+msgid "Description"
+msgstr "Kirjeldus"
+
+#: cmtls_media.features.field.inc:1934
+msgid "Display a \"download original image\" link"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1935
+msgid "Gallery collection"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1936
+msgid "Gallery format"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1937
+msgid "Gallery information"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1938
+msgid "Gallery media"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1939
+msgid "Group content visibility"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1940
+msgid "Groups audience"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1941
+msgid "Lightbox title and description"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1942
+msgid "Location"
+msgstr "Asukoht"
+
+#: cmtls_media.features.field.inc:1943
+msgid "Media information"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1944
+msgid "Number of columns"
+msgstr "Tulpade arv"
+
+#: cmtls_media.features.field.inc:1945
+msgid "Number of rows"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1946
+msgid "Show title and description"
+msgstr ""
+
+#: cmtls_media.features.field.inc:1947
+msgid "Tags"
+msgstr "Sildid"
+
+#: cmtls_media.views_default.inc:180
+msgid "Master"
+msgstr ""
+
+#: cmtls_media.views_default.inc:181
+msgid "Folders"
+msgstr ""
+
+#: cmtls_media.views_default.inc:182
+msgid "more"
+msgstr "veel"
+
+#: cmtls_media.views_default.inc:183
+msgid "Apply"
+msgstr "Rakenda"
+
+#: cmtls_media.views_default.inc:184
+msgid "Reset"
+msgstr "Lähtesta"
+
+#: cmtls_media.views_default.inc:185
+msgid "Sort by"
+msgstr "Sorteerimise alus"
+
+#: cmtls_media.views_default.inc:186
+msgid "Asc"
+msgstr "Kasvav"
+
+#: cmtls_media.views_default.inc:187
+msgid "Desc"
+msgstr "Kahanev"
+
+#: cmtls_media.views_default.inc:188
+msgid "Items per page"
+msgstr "Kirjeid lehel"
+
+#: cmtls_media.views_default.inc:189
+msgid "- All -"
+msgstr "- Kõik -"
+
+#: cmtls_media.views_default.inc:190
+msgid "Offset"
+msgstr "Nihe"
+
+#: cmtls_media.views_default.inc:191
+msgid "group membership"
+msgstr ""
+
+#: cmtls_media.views_default.inc:192
+msgid "Post date"
+msgstr "Postituse kuupäev"
+
+#: cmtls_media.views_default.inc:193
+msgid "Title"
+msgstr "Pealkiri"
+
+#: cmtls_media.views_default.inc:194
+msgid "Last comment time"
+msgstr "Viimase kommentaari aeg"
+
+#: cmtls_media.views_default.inc:195
+msgid "All"
+msgstr "Kõik"
+
+#: cmtls_media.views_default.inc:196
+msgid "Application content block"
+msgstr ""
+
+#: cmtls_media.views_default.inc:197
+msgid "Latest media block"
+msgstr ""
+
+#: cmtls_media.views_default.inc:198
+msgid "Latest media"
+msgstr "Viimased albumid"
+
+#: cmtls_media.views_default.inc:199
+msgid "Latest in group"
+msgstr ""
+
+#: cmtls_media.module:13
+msgid "Media galleries"
+msgstr ""
+
+#: cmtls_media.module:14
+msgid "Galleries for images, videos and files"
+msgstr ""
+
+#: cmtls_media.module:16
+msgid "Gallery"
+msgstr "Galerii"
+
+#: cmtls_media.module:28
+msgid "Gallery media preview"
+msgstr ""
+
+#: cmtls_media.module:122
+msgid "Thumbnails count"
+msgstr ""
+
+#: cmtls_media.module:144
+msgid "Default"
+msgstr "Vaikimisi"
+
+#: cmtls_media.module:145
+msgid "Thumbs: @view_mode"
+msgstr ""
+
+#: cmtls_media.info:0
+msgid "CT Media"
+msgstr ""
+
+#: cmtls_media.info:0
+msgid "Community Tools media galleries for images, videos and files"
+msgstr ""
+
+#: cmtls_media.info:0
+msgid "Community Tools"
+msgstr ""
+
