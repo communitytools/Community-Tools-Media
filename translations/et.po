@@ -13,8 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-05-25 16:39+0300\n"
-"PO-Revision-Date: 2012-05-25 16:39+0300\n"
+"POT-Creation-Date: 2012-05-28 15:25+0300\n"
+"PO-Revision-Date: 2012-05-28 15:25+0300\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Estonian <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgstr ""
 
 #: cmtls_media.features.field.inc:1928
 msgid "Application"
-msgstr ""
+msgstr "Tööriist"
 
 #: cmtls_media.features.field.inc:1929
 msgid "Choose a default <a href=\"http://creativecommons.org\">Creative Commons</a> license for all Gallery media. Later you can change the license for each piece of media."
@@ -88,7 +88,7 @@ msgstr ""
 
 #: cmtls_media.features.field.inc:1939
 msgid "Group content visibility"
-msgstr ""
+msgstr "Nähtavus"
 
 #: cmtls_media.features.field.inc:1940
 msgid "Groups audience"
@@ -204,7 +204,7 @@ msgstr ""
 
 #: cmtls_media.module:13
 msgid "Media galleries"
-msgstr ""
+msgstr "Pildigaleriid ja kaustad"
 
 #: cmtls_media.module:14
 msgid "Galleries for images, videos and files"
