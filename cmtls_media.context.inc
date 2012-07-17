@@ -65,9 +65,9 @@ function cmtls_media_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-cb129c8a19431ae6b2fd1711646e2de2' => array(
-          'module' => 'views',
-          'delta' => 'cb129c8a19431ae6b2fd1711646e2de2',
+        'cmtls-cmtls_subscribe' => array(
+          'module' => 'cmtls',
+          'delta' => 'cmtls_subscribe',
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
@@ -75,7 +75,13 @@ function cmtls_media_context_default_contexts() {
           'module' => 'views',
           'delta' => 'd3b739be3a716e61b54f0c1254eefd60',
           'region' => 'sidebar_second',
-          'weight' => '-10',
+          'weight' => '-9',
+        ),
+        'views-cb129c8a19431ae6b2fd1711646e2de2' => array(
+          'module' => 'views',
+          'delta' => 'cb129c8a19431ae6b2fd1711646e2de2',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
         ),
       ),
     ),
@@ -119,6 +125,12 @@ function cmtls_media_context_default_contexts() {
           'module' => 'views',
           'delta' => 'cmtls_media-block',
           'region' => 'content',
+          'weight' => '-10',
+        ),
+        'cmtls-cmtls_subscribe' => array(
+          'module' => 'cmtls',
+          'delta' => 'cmtls_subscribe',
+          'region' => 'sidebar_second',
           'weight' => '-10',
         ),
       ),
