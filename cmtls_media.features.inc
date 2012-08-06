@@ -67,15 +67,15 @@ function cmtls_media_flag_default_flags() {
     'weight' => 0,
     'show_on_page' => 1,
     'show_on_teaser' => 0,
-    'show_on_form' => 1,
+    'show_on_form' => 0,
     'show_contextual_link' => FALSE,
     'access_author' => '',
     'i18n' => 0,
-    'api_version' => 2,
     'module' => 'cmtls_media',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 2,
   );
   return $flags;
 }
