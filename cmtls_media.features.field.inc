@@ -457,6 +457,7 @@ function cmtls_media_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'media_gallery',
       'default_value' => NULL,
+      'default_value_function' => 'og_field_audience_default_value',
       'deleted' => '0',
       'description' => '',
       'display' => array(
