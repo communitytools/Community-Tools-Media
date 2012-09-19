@@ -1,4 +1,4 @@
-Community Tools Media
+Community Tools Posts
 -----------------------------------------
 
-Community Tools application module for galleries and misc file collections.
+Community Tools application module for articles, news and discussions.
