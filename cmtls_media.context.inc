@@ -29,9 +29,9 @@ function cmtls_media_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-cmtls_media-block_1' => array(
+        'views-12034cffb29690c0aaa98bb7ee8f9f9c' => array(
           'module' => 'views',
-          'delta' => 'cmtls_media-block_1',
+          'delta' => '12034cffb29690c0aaa98bb7ee8f9f9c',
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
