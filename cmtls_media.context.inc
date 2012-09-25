@@ -65,12 +65,6 @@ function cmtls_media_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'cmtls-cmtls_subscribe' => array(
-          'module' => 'cmtls',
-          'delta' => 'cmtls_subscribe',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
         'views-d3b739be3a716e61b54f0c1254eefd60' => array(
           'module' => 'views',
           'delta' => 'd3b739be3a716e61b54f0c1254eefd60',
@@ -125,12 +119,6 @@ function cmtls_media_context_default_contexts() {
           'module' => 'views',
           'delta' => 'cmtls_media-block',
           'region' => 'content',
-          'weight' => '-10',
-        ),
-        'cmtls-cmtls_subscribe' => array(
-          'module' => 'cmtls',
-          'delta' => 'cmtls_subscribe',
-          'region' => 'sidebar_second',
           'weight' => '-10',
         ),
       ),
