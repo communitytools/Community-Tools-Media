@@ -40,7 +40,7 @@ function cmtls_media_field_formatter_view($entity_type, $entity, $field, $instan
   if (!$items) {
     return $element;
   }
-  
+
   $file_view_mode = 'cmtls_gallery_teaser';
   $thumbs_count = $display['settings']['file_thumbs_count'];
 
@@ -100,9 +100,12 @@ function cmtls_media_field_formatter_view($entity_type, $entity, $field, $instan
       break;
     }
     $element[$delta] = file_view($item['file'], $file_view_mode, $langcode);
-    $element[$delta]['#media_gallery_entity_type'] = $entity_type;
-    $element[$delta]['#media_gallery_entity'] = $entity;
-    $element[$delta]['#theme'] = 'media_gallery_collection_thumbnail';
+    //$element[$delta]['#media_gallery_entity_type'] = $entity_type;
+    //$element[$delta]['#media_gallery_entity'] = $entity;
+    //$element[$delta]['#theme'] = 'media_gallery_collection_thumbnail';
+    if($element[$delta]['file']['#theme'] == 'file_link') {
+      //$element[$delta]['file']['#theme'] = 'cmtls_file_link';
+    }
   }
 
   return $element;
