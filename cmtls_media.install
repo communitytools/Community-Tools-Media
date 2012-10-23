@@ -37,9 +37,14 @@ function cmtls_media_install() {
  * Update 2.0-beta2
  */
 function cmtls_media_update_7201() {
+  // Add the file icon module.
+  module_enable(array(
+    'file_icon',
+  ));
+
   media_variable_set('icon_base_directory', drupal_get_path('module', 'cmtls') . '/images/icons');
 
-  // Enable DS view modes
+  // Enable DS view modes.
   $settings = variable_get('field_bundle_settings_file__default', array());
   $settings['view_modes']['cmtls_gallery_teaser']['custom_settings'] = TRUE;
   $settings['view_modes']['media_gallery_thumbnail']['custom_settings'] = TRUE;
