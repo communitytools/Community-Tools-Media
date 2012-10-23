@@ -39,7 +39,7 @@ function cmtls_media_install() {
 function cmtls_media_update_7201() {
   // Add the file icon module.
   module_enable(array(
-    'file_icon',
+    'file_icons',
   ));
 
   media_variable_set('icon_base_directory', drupal_get_path('module', 'cmtls') . '/images/icons');
