@@ -79,6 +79,105 @@ function cmtls_media_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-media_gallery-field_cmtls_address'
+  $fields['node-media_gallery-field_cmtls_address'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_cmtls_address',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'module' => 'addressfield',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'addressfield',
+    ),
+    'field_instance' => array(
+      'bundle' => 'media_gallery',
+      'default_value' => array(
+        0 => array(
+          'element_key' => 'node|media_gallery|field_cmtls_address|und|0',
+          'thoroughfare' => '',
+          'premise' => '',
+          'postal_code' => '',
+          'locality' => '',
+          'country' => 'EE',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'cmtls_gallery_preview' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'cmtls_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'default' => array(
+          'label' => 'above',
+          'module' => 'addressfield',
+          'settings' => array(
+            'format_handlers' => array(
+              0 => 'address',
+            ),
+            'use_widget_handlers' => 1,
+          ),
+          'type' => 'addressfield_default',
+          'weight' => 27,
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'media_gallery_block' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_cmtls_address',
+      'label' => 'Address',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'addressfield',
+        'settings' => array(
+          'available_countries' => array(),
+          'format_handlers' => array(
+            'address' => 'address',
+            'address-hide-country' => 'address-hide-country',
+            'name-full' => 0,
+            'name-oneline' => 'name-oneline',
+            'organisation' => 0,
+          ),
+        ),
+        'type' => 'addressfield_standard',
+        'weight' => '3',
+      ),
+    ),
+  );
+
   // Exported field: 'node-media_gallery-field_cmtls_application'
   $fields['node-media_gallery-field_cmtls_application'] = array(
     'field_config' => array(
@@ -174,100 +273,20 @@ function cmtls_media_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-media_gallery-field_cmtls_location'
-  $fields['node-media_gallery-field_cmtls_location'] = array(
+  // Exported field: 'node-media_gallery-field_cmtls_geometry'
+  $fields['node-media_gallery-field_cmtls_geometry'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_cmtls_location',
+      'field_name' => 'field_cmtls_geometry',
       'foreign keys' => array(),
-      'indexes' => array(
-        'lid' => array(
-          0 => 'lid',
-        ),
-      ),
-      'module' => 'location_cck',
-      'settings' => array(
-        'gmap_macro' => '[gmap ]',
-        'gmap_marker' => 'small orange',
-        'location_settings' => array(
-          'display' => array(
-            'hide' => array(
-              'additional' => 'additional',
-              'city' => 0,
-              'coords' => 'coords',
-              'country' => 0,
-              'country_name' => 'country_name',
-              'fax' => 0,
-              'locpick' => 'locpick',
-              'map_link' => 0,
-              'name' => 0,
-              'phone' => 0,
-              'postal_code' => 0,
-              'province' => 0,
-              'province_name' => 'province_name',
-              'street' => 0,
-            ),
-          ),
-          'form' => array(
-            'fields' => array(
-              'additional' => array(
-                'collect' => '0',
-                'default' => '',
-                'weight' => '-97',
-              ),
-              'city' => array(
-                'collect' => '1',
-                'default' => '',
-                'weight' => '-96',
-              ),
-              'country' => array(
-                'collect' => '1',
-                'default' => 'ee',
-                'weight' => '-93',
-              ),
-              'fax' => array(
-                'collect' => '0',
-                'default' => '',
-                'weight' => '30',
-              ),
-              'locpick' => array(
-                'collect' => '1',
-                'weight' => '-100',
-              ),
-              'name' => array(
-                'collect' => '1',
-                'default' => '',
-                'weight' => '-99',
-              ),
-              'phone' => array(
-                'collect' => '0',
-                'default' => '',
-                'weight' => '25',
-              ),
-              'postal_code' => array(
-                'collect' => '1',
-                'default' => '',
-                'weight' => '-94',
-              ),
-              'province' => array(
-                'collect' => '1',
-                'default' => '',
-                'weight' => '-95',
-              ),
-              'street' => array(
-                'collect' => '1',
-                'default' => '',
-                'weight' => '-98',
-              ),
-            ),
-          ),
-        ),
-      ),
+      'indexes' => array(),
+      'module' => 'geofield',
+      'settings' => array(),
       'translatable' => '0',
-      'type' => 'location',
+      'type' => 'geofield',
     ),
     'field_instance' => array(
       'bundle' => 'media_gallery',
@@ -279,26 +298,28 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '12',
+          'weight' => 0,
         ),
         'cmtls_teaser' => array(
-          'label' => 'hidden',
-          'module' => 'cmtls',
-          'settings' => array(),
-          'type' => 'cmtls_location_formatter',
-          'weight' => '2',
-        ),
-        'default' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '12',
+          'weight' => 0,
+        ),
+        'default' => array(
+          'label' => 'above',
+          'module' => 'geofield',
+          'settings' => array(
+            'data' => 'full',
+          ),
+          'type' => 'geofield_wkt',
+          'weight' => 28,
         ),
         'full' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '16',
+          'weight' => 0,
         ),
         'media_gallery_block' => array(
           'label' => 'above',
@@ -310,22 +331,30 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '4',
+          'weight' => 0,
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_cmtls_location',
-      'label' => 'Location',
+      'field_name' => 'field_cmtls_geometry',
+      'label' => 'Map',
       'required' => 0,
       'settings' => array(
+        'local_solr' => array(
+          'enabled' => FALSE,
+          'lat_field' => 'lat',
+          'lng_field' => 'lng',
+        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 0,
-        'module' => 'location_cck',
-        'settings' => array(),
-        'type' => 'location',
-        'weight' => '3',
+        'active' => 1,
+        'module' => 'geofield',
+        'settings' => array(
+          'data_storage' => 'collection',
+          'openlayers_map' => 'geofield_widget_map',
+        ),
+        'type' => 'geofield_openlayers',
+        'weight' => '2',
       ),
     ),
   );
@@ -712,7 +741,7 @@ function cmtls_media_field_default_fields() {
           'display_label' => 0,
         ),
         'type' => 'options_onoff',
-        'weight' => '11',
+        'weight' => '12',
       ),
     ),
   );
@@ -797,7 +826,7 @@ function cmtls_media_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '2',
+        'weight' => '4',
       ),
     ),
   );
@@ -879,7 +908,7 @@ function cmtls_media_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '12',
+        'weight' => '13',
       ),
     ),
   );
@@ -975,7 +1004,7 @@ function cmtls_media_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '13',
+        'weight' => '14',
       ),
     ),
   );
@@ -1060,7 +1089,7 @@ function cmtls_media_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '6',
+        'weight' => '8',
       ),
     ),
   );
@@ -1237,7 +1266,7 @@ function cmtls_media_field_default_fields() {
           'display_label' => 0,
         ),
         'type' => 'options_onoff',
-        'weight' => '10',
+        'weight' => '11',
       ),
     ),
   );
@@ -1322,7 +1351,7 @@ function cmtls_media_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '4',
+        'weight' => '6',
       ),
     ),
   );
@@ -1407,7 +1436,7 @@ function cmtls_media_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '8',
+        'weight' => '10',
       ),
     ),
   );
@@ -1494,7 +1523,7 @@ function cmtls_media_field_default_fields() {
           'display_label' => 0,
         ),
         'type' => 'options_onoff',
-        'weight' => '5',
+        'weight' => '7',
       ),
     ),
   );
@@ -1600,7 +1629,7 @@ function cmtls_media_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '3',
+        'weight' => '5',
       ),
     ),
   );
@@ -1682,7 +1711,7 @@ function cmtls_media_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '7',
+        'weight' => '9',
       ),
     ),
   );
@@ -1925,6 +1954,7 @@ function cmtls_media_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Address');
   t('Allow downloading of the original image');
   t('Application');
   t('Choose a default <a href="http://creativecommons.org">Creative Commons</a> license for all Gallery media. Later you can change the license for each piece of media.');
@@ -1940,7 +1970,7 @@ function cmtls_media_field_default_fields() {
   t('Group content visibility');
   t('Groups audience');
   t('Lightbox title and description');
-  t('Location');
+  t('Map');
   t('Media information');
   t('Number of columns');
   t('Number of rows');

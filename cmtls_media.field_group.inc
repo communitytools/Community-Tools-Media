@@ -53,8 +53,8 @@ function cmtls_media_field_group_info() {
     'label' => 'Gallery',
     'weight' => '22',
     'children' => array(
-      0 => 'media_gallery_description',
-      1 => 'field_cmtls_tags',
+      0 => 'field_cmtls_tags',
+      1 => 'media_gallery_description',
       2 => 'title',
     ),
     'format_type' => 'htab',
@@ -82,7 +82,8 @@ function cmtls_media_field_group_info() {
     'label' => 'Location',
     'weight' => '23',
     'children' => array(
-      0 => 'field_cmtls_location',
+      0 => 'field_cmtls_geometry',
+      1 => 'field_cmtls_address',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
