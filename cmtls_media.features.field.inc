@@ -235,7 +235,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '20',
+          'weight' => '21',
         ),
         'default' => array(
           'label' => 'above',
@@ -310,7 +310,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '14',
+          'weight' => '15',
         ),
         'default' => array(
           'label' => 'above',
@@ -506,7 +506,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '28',
+          'weight' => '29',
         ),
         'default' => array(
           'label' => 'above',
@@ -611,7 +611,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '29',
+          'weight' => '30',
         ),
         'default' => array(
           'label' => 'above',
@@ -707,7 +707,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '23',
+          'weight' => '24',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -794,7 +794,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '25',
+          'weight' => '26',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -872,7 +872,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '26',
+          'weight' => '27',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -972,7 +972,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '27',
+          'weight' => '28',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1057,7 +1057,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '19',
+          'weight' => '20',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1142,7 +1142,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '16',
+          'weight' => '17',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1232,7 +1232,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '24',
+          'weight' => '25',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1319,7 +1319,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '17',
+          'weight' => '18',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1404,7 +1404,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '22',
+          'weight' => '23',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1489,7 +1489,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '18',
+          'weight' => '19',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1675,7 +1675,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '21',
+          'weight' => '22',
         ),
         'default' => array(
           'label' => 'hidden',

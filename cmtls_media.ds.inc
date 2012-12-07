@@ -113,6 +113,11 @@ function cmtls_media_ds_field_settings_info() {
         'class' => '',
       ),
     ),
+    'comments' => array(
+      'weight' => '5',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
   );
   $export['node|media_gallery|cmtls_teaser'] = $ds_fieldsetting;
 
@@ -266,6 +271,7 @@ function cmtls_media_ds_layout_settings_info() {
         0 => 'cmtls_location_indicator',
         1 => 'field_cmtls_address',
         2 => 'field_cmtls_tags',
+        3 => 'comments',
       ),
     ),
     'fields' => array(
@@ -274,6 +280,7 @@ function cmtls_media_ds_layout_settings_info() {
       'cmtls_location_indicator' => 'footer',
       'field_cmtls_address' => 'footer',
       'field_cmtls_tags' => 'footer',
+      'comments' => 'footer',
     ),
     'classes' => array(),
   );
