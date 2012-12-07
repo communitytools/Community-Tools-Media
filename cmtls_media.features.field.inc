@@ -116,10 +116,16 @@ function cmtls_media_field_default_fields() {
           'weight' => 0,
         ),
         'cmtls_teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'label' => 'hidden',
+          'module' => 'addressfield',
+          'settings' => array(
+            'format_handlers' => array(
+              0 => 'address',
+            ),
+            'use_widget_handlers' => 1,
+          ),
+          'type' => 'addressfield_default',
+          'weight' => '3',
         ),
         'default' => array(
           'label' => 'above',
@@ -229,7 +235,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '17',
+          'weight' => '20',
         ),
         'default' => array(
           'label' => 'above',
@@ -304,7 +310,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '14',
         ),
         'default' => array(
           'label' => 'above',
@@ -409,7 +415,7 @@ function cmtls_media_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'default' => array(
           'label' => 'above',
@@ -500,7 +506,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '25',
+          'weight' => '28',
         ),
         'default' => array(
           'label' => 'above',
@@ -605,7 +611,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '26',
+          'weight' => '29',
         ),
         'default' => array(
           'label' => 'above',
@@ -701,7 +707,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '20',
+          'weight' => '23',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -788,7 +794,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '22',
+          'weight' => '25',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -866,7 +872,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '23',
+          'weight' => '26',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -966,7 +972,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '24',
+          'weight' => '27',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1051,7 +1057,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '16',
+          'weight' => '19',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1136,7 +1142,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '12',
+          'weight' => '16',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1226,7 +1232,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '21',
+          'weight' => '24',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1313,7 +1319,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '14',
+          'weight' => '17',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1398,7 +1404,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '19',
+          'weight' => '22',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1483,7 +1489,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '15',
+          'weight' => '18',
         ),
         'default' => array(
           'label' => 'hidden',
@@ -1669,7 +1675,7 @@ function cmtls_media_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '18',
+          'weight' => '21',
         ),
         'default' => array(
           'label' => 'hidden',
