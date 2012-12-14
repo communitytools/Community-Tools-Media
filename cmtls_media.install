@@ -52,3 +52,35 @@ function cmtls_media_update_7201() {
   $settings['view_modes']['media_gallery_detail']['custom_settings'] = TRUE;
   variable_set('field_bundle_settings_file__default', $settings);
 }
+
+/**
+ * Update 2.0-beta3
+ */
+function cmtls_media_update_7202() {
+  // Add new modules.
+  module_enable(array(
+    'geofield',
+    'geophp',
+    'addressfield',
+    'openlayers',
+    'openlayers_views',
+  ));
+
+  // Revert features so the geofield and addressfield will become available.
+  cmtls_features_revert(array('cmtls_media'));
+
+  // Convert locations to geofields and addressfields.
+  $nodes = node_load_multiple(array(), array(
+    'type' => 'media_gallery',
+  ));
+
+  if(sizeof($nodes)) {
+    cmtls_convert_node_location($nodes);
+  }
+
+  // Delete location fields.
+  $instance = field_info_instance('node', 'field_cmtls_location', 'media_gallery');
+  field_delete_instance($instance);
+
+  field_purge_batch(100);
+}
