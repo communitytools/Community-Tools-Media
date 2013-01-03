@@ -116,14 +116,9 @@ function cmtls_media_field_default_fields() {
         ),
         'cmtls_teaser' => array(
           'label' => 'hidden',
-          'module' => 'addressfield',
-          'settings' => array(
-            'format_handlers' => array(
-              0 => 'address',
-            ),
-            'use_widget_handlers' => 1,
-          ),
-          'type' => 'addressfield_default',
+          'module' => 'cmtls',
+          'settings' => array(),
+          'type' => 'cmtls_addressfield',
           'weight' => '3',
         ),
         'default' => array(
