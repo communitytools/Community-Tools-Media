@@ -65,17 +65,17 @@ function cmtls_media_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-232f47dca370db2ede449d3046af1658' => array(
+          'module' => 'views',
+          'delta' => '232f47dca370db2ede449d3046af1658',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
         'views-d3b739be3a716e61b54f0c1254eefd60' => array(
           'module' => 'views',
           'delta' => 'd3b739be3a716e61b54f0c1254eefd60',
           'region' => 'sidebar_second',
           'weight' => '-9',
-        ),
-        'views-cb129c8a19431ae6b2fd1711646e2de2' => array(
-          'module' => 'views',
-          'delta' => 'cb129c8a19431ae6b2fd1711646e2de2',
-          'region' => 'sidebar_second',
-          'weight' => '-8',
         ),
       ),
     ),
