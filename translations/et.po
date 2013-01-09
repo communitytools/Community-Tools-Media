@@ -13,8 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2012-05-28 15:25+0300\n"
-"PO-Revision-Date: 2012-05-28 15:25+0300\n"
+"POT-Creation-Date: 2013-01-07 16:02+0200\n"
+"PO-Revision-Date: 2013-01-07 16:02+0200\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Estonian <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -38,168 +38,180 @@ msgstr ""
 msgid "Community Tools medias page"
 msgstr ""
 
-#: cmtls_media.features.field.inc:1927
-msgid "Allow downloading of the original image"
-msgstr ""
+#: cmtls_media.features.field.inc:1957
+msgid "Address"
+msgstr "Aadress"
 
-#: cmtls_media.features.field.inc:1928
+#: cmtls_media.features.field.inc:1958
+msgid "Allow downloading of the original image"
+msgstr "Luba algse pildi allalaadimine"
+
+#: cmtls_media.features.field.inc:1959
 msgid "Application"
 msgstr "Tööriist"
 
-#: cmtls_media.features.field.inc:1929
+#: cmtls_media.features.field.inc:1960
 msgid "Choose a default <a href=\"http://creativecommons.org\">Creative Commons</a> license for all Gallery media. Later you can change the license for each piece of media."
 msgstr ""
 
-#: cmtls_media.features.field.inc:1930
+#: cmtls_media.features.field.inc:1961
 msgid "Comment"
 msgstr "Kommentaar"
 
-#: cmtls_media.features.field.inc:1931
+#: cmtls_media.features.field.inc:1962
 msgid "Create a block of most recently added media"
-msgstr ""
+msgstr "Loo viimati lisatud meediast plokk"
 
-#: cmtls_media.features.field.inc:1932
+#: cmtls_media.features.field.inc:1963
 msgid "Default license settings"
 msgstr ""
 
-#: cmtls_media.features.field.inc:1933
+#: cmtls_media.features.field.inc:1964
 msgid "Description"
 msgstr "Kirjeldus"
 
-#: cmtls_media.features.field.inc:1934
+#: cmtls_media.features.field.inc:1965
 msgid "Display a \"download original image\" link"
-msgstr ""
+msgstr "Näita \"laadi alla algne pilt\" linki"
 
-#: cmtls_media.features.field.inc:1935
+#: cmtls_media.features.field.inc:1966
 msgid "Gallery collection"
 msgstr ""
 
-#: cmtls_media.features.field.inc:1936
+#: cmtls_media.features.field.inc:1967
 msgid "Gallery format"
 msgstr ""
 
-#: cmtls_media.features.field.inc:1937
+#: cmtls_media.features.field.inc:1968
 msgid "Gallery information"
-msgstr ""
+msgstr "Galerii andmed"
 
-#: cmtls_media.features.field.inc:1938
+#: cmtls_media.features.field.inc:1969 cmtls_media.views_default.inc:354
 msgid "Gallery media"
-msgstr ""
+msgstr "Galerii meedia"
 
-#: cmtls_media.features.field.inc:1939
+#: cmtls_media.features.field.inc:1970
 msgid "Group content visibility"
-msgstr "Nähtavus"
+msgstr "Sisu nähtavus"
 
-#: cmtls_media.features.field.inc:1940
+#: cmtls_media.features.field.inc:1971
 msgid "Groups audience"
 msgstr ""
 
-#: cmtls_media.features.field.inc:1941
+#: cmtls_media.features.field.inc:1972
 msgid "Lightbox title and description"
 msgstr ""
 
-#: cmtls_media.features.field.inc:1942
-msgid "Location"
-msgstr "Asukoht"
+#: cmtls_media.features.field.inc:1973
+msgid "Map"
+msgstr "Kaart"
 
-#: cmtls_media.features.field.inc:1943
+#: cmtls_media.features.field.inc:1974
 msgid "Media information"
 msgstr ""
 
-#: cmtls_media.features.field.inc:1944
+#: cmtls_media.features.field.inc:1975
 msgid "Number of columns"
 msgstr "Tulpade arv"
 
-#: cmtls_media.features.field.inc:1945
+#: cmtls_media.features.field.inc:1976
 msgid "Number of rows"
-msgstr ""
+msgstr "Ridade arv"
 
-#: cmtls_media.features.field.inc:1946
+#: cmtls_media.features.field.inc:1977
 msgid "Show title and description"
-msgstr ""
+msgstr "Näita pealkirja ja kirjeldust"
 
-#: cmtls_media.features.field.inc:1947
+#: cmtls_media.features.field.inc:1978
 msgid "Tags"
 msgstr "Sildid"
 
-#: cmtls_media.views_default.inc:180
+#: cmtls_media.views_default.inc:334
 msgid "Master"
 msgstr ""
 
-#: cmtls_media.views_default.inc:181
+#: cmtls_media.views_default.inc:335
 msgid "Folders"
 msgstr ""
 
-#: cmtls_media.views_default.inc:182
+#: cmtls_media.views_default.inc:336
 msgid "more"
 msgstr "veel"
 
-#: cmtls_media.views_default.inc:183
+#: cmtls_media.views_default.inc:337
 msgid "Apply"
 msgstr "Rakenda"
 
-#: cmtls_media.views_default.inc:184
+#: cmtls_media.views_default.inc:338
 msgid "Reset"
 msgstr "Lähtesta"
 
-#: cmtls_media.views_default.inc:185
+#: cmtls_media.views_default.inc:339
 msgid "Sort by"
 msgstr "Sorteerimise alus"
 
-#: cmtls_media.views_default.inc:186
+#: cmtls_media.views_default.inc:340
 msgid "Asc"
 msgstr "Kasvav"
 
-#: cmtls_media.views_default.inc:187
+#: cmtls_media.views_default.inc:341
 msgid "Desc"
 msgstr "Kahanev"
 
-#: cmtls_media.views_default.inc:188
+#: cmtls_media.views_default.inc:342
 msgid "Items per page"
 msgstr "Kirjeid lehel"
 
-#: cmtls_media.views_default.inc:189
+#: cmtls_media.views_default.inc:343
 msgid "- All -"
 msgstr "- Kõik -"
 
-#: cmtls_media.views_default.inc:190
+#: cmtls_media.views_default.inc:344
 msgid "Offset"
 msgstr "Nihe"
 
-#: cmtls_media.views_default.inc:191
-msgid "group membership"
+#: cmtls_media.views_default.inc:345
+msgid "OG membership from node"
 msgstr ""
 
-#: cmtls_media.views_default.inc:192
+#: cmtls_media.views_default.inc:346
 msgid "Post date"
 msgstr "Postituse kuupäev"
 
-#: cmtls_media.views_default.inc:193
+#: cmtls_media.views_default.inc:347
 msgid "Title"
 msgstr "Pealkiri"
 
-#: cmtls_media.views_default.inc:194
+#: cmtls_media.views_default.inc:348
 msgid "Last comment time"
 msgstr "Viimase kommentaari aeg"
 
-#: cmtls_media.views_default.inc:195
+#: cmtls_media.views_default.inc:349
 msgid "All"
 msgstr "Kõik"
 
-#: cmtls_media.views_default.inc:196
+#: cmtls_media.views_default.inc:350
 msgid "Application content block"
 msgstr ""
 
-#: cmtls_media.views_default.inc:197
+#: cmtls_media.views_default.inc:351
 msgid "Latest media block"
 msgstr ""
 
-#: cmtls_media.views_default.inc:198
+#: cmtls_media.views_default.inc:352
 msgid "Latest media"
 msgstr "Viimased albumid"
 
-#: cmtls_media.views_default.inc:199
+#: cmtls_media.views_default.inc:353
 msgid "Latest in group"
+msgstr ""
+
+#: cmtls_media.views_default.inc:355
+msgid "Updated date"
+msgstr "Viimati uuendatud"
+
+#: cmtls_media.views_default.inc:356
+msgid "Updated/commented date"
 msgstr ""
 
 #: cmtls_media.module:13
@@ -218,15 +230,15 @@ msgstr "Galerii"
 msgid "Gallery media preview"
 msgstr ""
 
-#: cmtls_media.module:122
+#: cmtls_media.module:125
 msgid "Thumbnails count"
 msgstr ""
 
-#: cmtls_media.module:144
+#: cmtls_media.module:147
 msgid "Default"
 msgstr "Vaikimisi"
 
-#: cmtls_media.module:145
+#: cmtls_media.module:148
 msgid "Thumbs: @view_mode"
 msgstr ""
 
