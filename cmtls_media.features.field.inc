@@ -173,7 +173,7 @@ function cmtls_media_field_default_fields() {
           ),
         ),
         'type' => 'addressfield_standard',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -355,6 +355,100 @@ function cmtls_media_field_default_fields() {
         ),
         'type' => 'geofield_openlayers',
         'weight' => '2',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-media_gallery-field_cmtls_map_marker'
+  $fields['node-media_gallery-field_cmtls_map_marker'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_cmtls_map_marker',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'cmtls_marker',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'media_gallery',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'cmtls_gallery_preview' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'cmtls_teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 29,
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'media_gallery_block' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_cmtls_map_marker',
+      'label' => 'Marker',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '3',
       ),
     ),
   );
@@ -741,7 +835,7 @@ function cmtls_media_field_default_fields() {
           'display_label' => 0,
         ),
         'type' => 'options_onoff',
-        'weight' => '12',
+        'weight' => '11',
       ),
     ),
   );
@@ -826,7 +920,7 @@ function cmtls_media_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '4',
+        'weight' => '3',
       ),
     ),
   );
@@ -908,7 +1002,7 @@ function cmtls_media_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '13',
+        'weight' => '12',
       ),
     ),
   );
@@ -1004,7 +1098,7 @@ function cmtls_media_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '14',
+        'weight' => '13',
       ),
     ),
   );
@@ -1089,7 +1183,7 @@ function cmtls_media_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '8',
+        'weight' => '7',
       ),
     ),
   );
@@ -1266,7 +1360,7 @@ function cmtls_media_field_default_fields() {
           'display_label' => 0,
         ),
         'type' => 'options_onoff',
-        'weight' => '11',
+        'weight' => '10',
       ),
     ),
   );
@@ -1351,7 +1445,7 @@ function cmtls_media_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '6',
+        'weight' => '5',
       ),
     ),
   );
@@ -1436,7 +1530,7 @@ function cmtls_media_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '10',
+        'weight' => '9',
       ),
     ),
   );
@@ -1523,7 +1617,7 @@ function cmtls_media_field_default_fields() {
           'display_label' => 0,
         ),
         'type' => 'options_onoff',
-        'weight' => '7',
+        'weight' => '6',
       ),
     ),
   );
@@ -1629,7 +1723,7 @@ function cmtls_media_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '5',
+        'weight' => '4',
       ),
     ),
   );
@@ -1711,7 +1805,7 @@ function cmtls_media_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '9',
+        'weight' => '8',
       ),
     ),
   );
@@ -1971,6 +2065,7 @@ function cmtls_media_field_default_fields() {
   t('Groups audience');
   t('Lightbox title and description');
   t('Map');
+  t('Marker');
   t('Media information');
   t('Number of columns');
   t('Number of rows');

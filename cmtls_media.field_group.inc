@@ -23,9 +23,9 @@ function cmtls_media_field_group_info() {
     'label' => 'Advanced',
     'weight' => '1',
     'children' => array(
-      0 => 'group_audience',
-      1 => 'group_content_access',
-      2 => 'field_cmtls_application',
+      0 => 'field_cmtls_application',
+      1 => 'group_audience',
+      2 => 'group_content_access',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -53,8 +53,8 @@ function cmtls_media_field_group_info() {
     'label' => 'Gallery',
     'weight' => '22',
     'children' => array(
-      0 => 'field_cmtls_tags',
-      1 => 'media_gallery_description',
+      0 => 'media_gallery_description',
+      1 => 'field_cmtls_tags',
       2 => 'title',
     ),
     'format_type' => 'htab',
@@ -82,8 +82,9 @@ function cmtls_media_field_group_info() {
     'label' => 'Location',
     'weight' => '23',
     'children' => array(
-      0 => 'field_cmtls_geometry',
-      1 => 'field_cmtls_address',
+      0 => 'field_cmtls_address',
+      1 => 'field_cmtls_geometry',
+      2 => 'field_cmtls_map_marker',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
