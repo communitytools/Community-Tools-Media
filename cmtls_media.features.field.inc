@@ -182,7 +182,7 @@ function cmtls_media_field_default_fields() {
   $fields['node-media_gallery-field_cmtls_application'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_cmtls_application',
@@ -203,6 +203,13 @@ function cmtls_media_field_default_fields() {
       'settings' => array(
         'referenceable_types' => array(
           'cmtls_app' => 'cmtls_app',
+          'cmtls_event' => 0,
+          'cmtls_group' => 0,
+          'cmtls_location' => 0,
+          'cmtls_post' => 0,
+          'media_gallery' => 0,
+          'page' => 0,
+          'webform' => 0,
         ),
         'view' => array(
           'args' => array(),
@@ -351,7 +358,7 @@ function cmtls_media_field_default_fields() {
         'module' => 'geofield',
         'settings' => array(
           'data_storage' => 'collection',
-          'openlayers_map' => 'geofield_widget_map',
+          'openlayers_map' => 'cmtls_geometry_widget',
         ),
         'type' => 'geofield_openlayers',
         'weight' => '2',
@@ -438,7 +445,7 @@ function cmtls_media_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_cmtls_map_marker',
-      'label' => 'Marker',
+      'label' => 'Map layer',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -554,7 +561,7 @@ function cmtls_media_field_default_fields() {
   $fields['node-media_gallery-group_audience'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'group_audience',
@@ -624,7 +631,7 @@ function cmtls_media_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'group_audience',
       'label' => 'Groups audience',
-      'required' => FALSE,
+      'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -641,6 +648,7 @@ function cmtls_media_field_default_fields() {
         ),
       ),
       'widget' => array(
+        'active' => 1,
         'module' => 'og',
         'settings' => array(
           'opt_group' => 'auto',
@@ -2065,7 +2073,7 @@ function cmtls_media_field_default_fields() {
   t('Groups audience');
   t('Lightbox title and description');
   t('Map');
-  t('Marker');
+  t('Map layer');
   t('Media information');
   t('Number of columns');
   t('Number of rows');
