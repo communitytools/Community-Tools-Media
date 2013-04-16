@@ -8,7 +8,6 @@ function cmtls_media_install() {
   variable_set('comment_default_mode_media_gallery', 0);
   variable_set('comment_default_per_page_media_gallery', 50);
   variable_set('comment_form_location_media_gallery', 1);
-  variable_set('comment_preview_media_gallery', 1);
   variable_set('comment_subject_field_media_gallery', 0);
   variable_set('node_options_media_gallery', array('status'));
   variable_set('node_preview_media_gallery', 0);
@@ -31,6 +30,7 @@ function cmtls_media_install() {
 
   // Updates.
   cmtls_media_update_7201();
+  cmtls_media_update_7204();
 }
 
 /**
@@ -83,4 +83,11 @@ function cmtls_media_update_7202() {
   field_delete_instance($instance);
 
   field_purge_batch(100);
+}
+
+/**
+ * Update 2.0-beta4 disable comment previews.
+ */
+function cmtls_media_update_7204() {
+  variable_set('comment_preview_media_gallery', 0);
 }
