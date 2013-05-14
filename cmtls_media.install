@@ -91,3 +91,19 @@ function cmtls_media_update_7202() {
 function cmtls_media_update_7204() {
   variable_set('comment_preview_media_gallery', 0);
 }
+
+/**
+ * Update 2.0-beta4 add default map layer to existing content.
+ */
+function cmtls_media_update_7205() {
+  // Revert features so the layer taxonomy will become available.
+  cmtls_features_revert(array('cmtls_media'));
+
+  $nodes = node_load_multiple(array(), array(
+    'type' => 'media_gallery',
+  ));
+
+  if(sizeof($nodes)) {
+    cmtls_node_add_default_layer($nodes);
+  }
+}
